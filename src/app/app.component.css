@@ -1,0 +1,5 @@
+.content {
+  background-image: radial-gradient(circle at center top, rgb(31, 55, 87) 20%, rgb(19, 21, 55) 100%);
+  color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
