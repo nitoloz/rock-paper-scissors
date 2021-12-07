@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ScoreModule } from '../score/score.module';
+import { ButtonModule } from '../button/button.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ScoreModule } from '../score/score.module';
   ],
   imports: [
     BrowserModule,
-    ScoreModule
+    ScoreModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

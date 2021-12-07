@@ -1,5 +1,12 @@
-<div class="content">
-  <div class="score-container">
-    <app-score [score]="2" [gameType]="gameTypeEnum.Advanced"></app-score>
+<div class="container">
+  <div class="content">
+    <div class="score-container">
+      <app-score [score]="2" [gameType]="gameTypeEnum.Advanced"></app-score>
+    </div>
+    <div class="buttons-container">
+      <app-button [label]="'rules'"></app-button>
+      <app-button [label]="'advanced'"></app-button>
+      <app-button [label]="'reset'"></app-button>
+    </div>
   </div>
 </div>
