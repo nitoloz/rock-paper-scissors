@@ -17,8 +17,16 @@
   flex-direction: column;
   justify-content: space-around;
   text-transform: uppercase;
+}
+
+.title-basic {
   font-size: 36px;
   line-height: 32px;
+}
+
+.title-advanced {
+  font-size: 27px;
+  line-height: 21px;
 }
 
 .score-container {

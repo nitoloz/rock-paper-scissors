@@ -11,6 +11,8 @@ export class ScoreComponent implements OnInit {
   @Input() public gameType = GameType.Basic;
   @Input() public score = 0;
 
+  public gameTypeEnum = GameType;
+
   constructor() {
   }
 
