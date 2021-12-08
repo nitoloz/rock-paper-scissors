@@ -1,4 +1,3 @@
-import { createAction, props } from '@ngrx/store';
-import { GameType } from '../../models/game-type';
+import { createAction } from '@ngrx/store';
 
-export const changeGameType = createAction('[RPS] Change game type', props<{gameType: GameType}>());
+export const changeGameType = createAction('[RPS] Change game type');

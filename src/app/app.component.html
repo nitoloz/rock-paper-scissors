@@ -4,10 +4,6 @@
       <app-header [score]="2" [gameType]="gameTypeEnum.Advanced"></app-header>
     </div>
     <app-hand-circles-container></app-hand-circles-container>
-    <div class="buttons-container">
-      <app-button [label]="'rules'"></app-button>
-      <app-button [label]="'advanced'" (clicked)="changeGameType()"></app-button>
-      <app-button [label]="'reset'"></app-button>
-    </div>
+    <app-buttons-container></app-buttons-container>
   </div>
 </div>

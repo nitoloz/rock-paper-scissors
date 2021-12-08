@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Hand } from '../../models/hand';
 import { GameType } from '../../models/game-type';
-import { select, State } from '@ngrx/store';
+import { select, State, Store } from '@ngrx/store';
 import { RootState } from '../../ngrx/reducers';
 import { selectGameType } from '../../ngrx/selectors/app.selectors';
 
@@ -14,9 +14,9 @@ export class HandCirclesContainerComponent {
   public handEnum = Hand;
   public gameTypeEnum = GameType;
 
-  public gameType$ = this.state.pipe(select(selectGameType));
+  public gameType$ = this.store.pipe(select(selectGameType));
 
-  constructor(private state: State<RootState>) {
+  constructor(private store: Store<RootState>) {
   }
 
   public handClicked(hand: Hand): void {

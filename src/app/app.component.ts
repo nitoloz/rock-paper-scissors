@@ -10,8 +10,4 @@ export class AppComponent {
 
   public gameTypeEnum = GameType;
 
-  public changeGameType(): void {
-
-  }
-
 }

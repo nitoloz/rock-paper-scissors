@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
-import { ButtonModule } from './components/button/button.module';
 import { HandCirclesContainerModule } from './components/hand-circles-container/hand-circles-container.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './ngrx/reducers';
+import { ButtonsContainerModule } from './components/buttons-container/buttons-container.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +15,9 @@ import { reducers } from './ngrx/reducers';
   imports: [
     BrowserModule,
     HeaderModule,
-    ButtonModule,
     HandCirclesContainerModule,
     StoreModule.forRoot(reducers),
+    ButtonsContainerModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]

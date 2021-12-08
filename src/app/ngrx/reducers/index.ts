@@ -16,7 +16,10 @@ const initialState = {
 
 export const appReducer = createReducer(
   initialState,
-  on(changeGameType, (state, { gameType }) => ({ ...state, gameType })),
+  on(changeGameType, (state) => ({
+    ...state,
+    gameType: state.gameType === GameType.Basic ? GameType.Advanced : GameType.Basic
+  })),
 );
 
 export const reducers: ActionReducerMap<RootState> = {
