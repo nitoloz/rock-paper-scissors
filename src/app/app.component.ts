@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GameType } from '../models/game-type';
+import { GameType } from './models/game-type';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,9 @@ import { GameType } from '../models/game-type';
 export class AppComponent {
 
   public gameTypeEnum = GameType;
+
+  public changeGameType(): void {
+
+  }
 
 }

@@ -6,7 +6,7 @@
     <app-hand-circles-container></app-hand-circles-container>
     <div class="buttons-container">
       <app-button [label]="'rules'"></app-button>
-      <app-button [label]="'advanced'"></app-button>
+      <app-button [label]="'advanced'" (clicked)="changeGameType()"></app-button>
       <app-button [label]="'reset'"></app-button>
     </div>
   </div>
