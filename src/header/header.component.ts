@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { GameType } from '../models/game-type';
 
 @Component({
-  selector: 'app-score',
-  templateUrl: './score.component.html',
-  styleUrls: [ './score.component.scss' ]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: [ './header.component.scss' ]
 })
-export class ScoreComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   @Input() public gameType = GameType.Basic;
   @Input() public score = 0;

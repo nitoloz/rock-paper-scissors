@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ScoreModule } from '../score/score.module';
+import { HeaderModule } from '../header/header.module';
 import { ButtonModule } from '../button/button.module';
 import { HandCircleModule } from '../hand-circle/hand-circle.module';
 
@@ -12,7 +12,7 @@ import { HandCircleModule } from '../hand-circle/hand-circle.module';
   ],
   imports: [
     BrowserModule,
-    ScoreModule,
+    HeaderModule,
     ButtonModule,
     HandCircleModule
   ],

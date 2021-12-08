@@ -1,7 +1,13 @@
 <div class="container">
   <div class="content">
-    <div class="score-container">
-      <app-score [score]="2" [gameType]="gameTypeEnum.Advanced"></app-score>
+    <div class="header-container">
+      <app-header [score]="2" [gameType]="gameTypeEnum.Advanced"></app-header>
+    </div>
+    <div class="hand-circles-container">
+      <div>
+        <app-hand-circle></app-hand-circle>
+        <app-hand-circle></app-hand-circle>
+      </div>
     </div>
     <div class="buttons-container">
       <app-button [label]="'rules'"></app-button>

@@ -1,6 +1,6 @@
 <div class="score-frame">
   <div class="title" [ngClass]="{'title-basic': gameType === gameTypeEnum.Basic, 'title-advanced': gameType === gameTypeEnum.Advanced}">
-    <div *ngFor="let label of (gameType | gameHands)">{{label}}</div>
+    <div *ngFor="let label of (gameType | gameTitle)">{{label}}</div>
   </div>
   <div class="score-container">
     <div class="score-label">score</div>
