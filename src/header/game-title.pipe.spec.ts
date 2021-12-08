@@ -1,4 +1,4 @@
-import { GameTitlePipe } from './game-hands.pipe';
+import { GameTitlePipe } from './game-title.pipe';
 import { GameType } from '../models/game-type';
 
 describe('GameHandsPipe', () => {

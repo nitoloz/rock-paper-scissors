@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HandCircleComponent } from './hand-circle.component';
+import { HandIconPipe } from './hand-icon.pipe';
 
 describe('HandCircleComponent', () => {
   let component: HandCircleComponent;
@@ -8,9 +9,9 @@ describe('HandCircleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HandCircleComponent ]
+      declarations: [ HandCircleComponent, HandIconPipe ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

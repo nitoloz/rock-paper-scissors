@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
+import { GameTitlePipe } from './game-title.pipe';
 
 describe('ScoreComponent', () => {
   let component: HeaderComponent;
@@ -8,7 +9,7 @@ describe('ScoreComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ HeaderComponent, GameTitlePipe ]
     })
     .compileComponents();
   });
