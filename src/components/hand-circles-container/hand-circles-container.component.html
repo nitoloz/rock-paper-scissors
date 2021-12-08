@@ -1,13 +1,24 @@
 <div class="rows-container">
-  <div class="circles-row">
-    <app-hand-circle [hand]="handEnum.Scissors"></app-hand-circle>
-  </div>
-  <div class="circles-row circles-row--second row-padding">
-    <app-hand-circle [hand]="handEnum.Spock"></app-hand-circle>
-    <app-hand-circle [hand]="handEnum.Paper"></app-hand-circle>
-  </div>
-  <div class="circles-row circles-row--third row-padding">
-    <app-hand-circle [hand]="handEnum.Lizard"></app-hand-circle>
-    <app-hand-circle [hand]="handEnum.Rock"></app-hand-circle>
-  </div>
+  <ng-container *ngIf="gameType === gameTypeEnum.Advanced; else basicGameMode">
+    <div class="circles-row">
+      <app-hand-circle [hand]="handEnum.Scissors" (handClicked)="handClicked(handEnum.Scissors)"></app-hand-circle>
+    </div>
+    <div class="circles-row circles-row--second-advanced">
+      <app-hand-circle [hand]="handEnum.Spock" (handClicked)="handClicked(handEnum.Spock)"></app-hand-circle>
+      <app-hand-circle [hand]="handEnum.Paper" (handClicked)="handClicked(handEnum.Paper)"></app-hand-circle>
+    </div>
+    <div class="circles-row circles-row--third-advanced">
+      <app-hand-circle [hand]="handEnum.Lizard" (handClicked)="handClicked(handEnum.Lizard)"></app-hand-circle>
+      <app-hand-circle [hand]="handEnum.Rock" (handClicked)="handClicked(handEnum.Rock)"></app-hand-circle>
+    </div>
+  </ng-container>
+  <ng-template #basicGameMode>
+    <div class="circles-row">
+      <app-hand-circle [hand]="handEnum.Scissors" (handClicked)="handClicked(handEnum.Scissors)"></app-hand-circle>
+    </div>
+    <div class="circles-row circles-row--second-basic">
+      <app-hand-circle [hand]="handEnum.Rock" (handClicked)="handClicked(handEnum.Rock)"></app-hand-circle>
+      <app-hand-circle [hand]="handEnum.Paper" (handClicked)="handClicked(handEnum.Paper)"></app-hand-circle>
+    </div>
+  </ng-template>
 </div>
