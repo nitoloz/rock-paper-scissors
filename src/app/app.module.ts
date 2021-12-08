@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderModule } from '../components/header/header.module';
 import { ButtonModule } from '../components/button/button.module';
-import { HandCircleModule } from '../components/hand-circle/hand-circle.module';
+import { HandCirclesContainerModule } from '../components/hand-circles-container/hand-circles-container.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { HandCircleModule } from '../components/hand-circle/hand-circle.module';
     BrowserModule,
     HeaderModule,
     ButtonModule,
-    HandCircleModule
+    HandCirclesContainerModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]
