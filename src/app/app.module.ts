@@ -4,15 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ScoreModule } from '../score/score.module';
 import { ButtonModule } from '../button/button.module';
+import { HandCircleModule } from '../hand-circle/hand-circle.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     ScoreModule,
-    ButtonModule
+    ButtonModule,
+    HandCircleModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

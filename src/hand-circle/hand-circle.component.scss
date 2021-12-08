@@ -1,0 +1,49 @@
+.white-circle {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.colored-border {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin colored-circle($center-color, $side-color, $shadow-color) {
+  background-image: radial-gradient($center-color, $side-color);
+  box-shadow: 0 10px 0 -5px $shadow-color;
+}
+
+.colored-border--blue {
+  @include colored-circle(hsl(230, 89%, 62%), hsl(230, 89%, 65%), #2944c2);
+}
+
+.colored-border--red {
+  @include colored-circle(hsl(349, 71%, 52%), hsl(349, 70%, 56%), #9e1633);
+}
+
+.colored-border--yellow {
+  @include colored-circle(hsl(39, 89%, 49%), hsl(40, 84%, 53%), #cb6b18);
+
+  //background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  //box-shadow: 0 10px 0 -5px #cb6b18;
+}
+
+.colored-border--lightblue {
+  @include colored-circle(hsl(189, 59%, 53%), hsl(189, 58%, 57%), #2d8fab);
+
+  //background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  //box-shadow: 0 10px 0 -5px #2d8fab;
+}
+
+.colored-border--violet {
+  @include colored-circle(hsl(261, 73%, 60%), hsl(261, 72%, 63%), #5e36ac);
+
+  //background-image: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  //box-shadow: 0 10px 0 -5px #5e36ac;
+}
