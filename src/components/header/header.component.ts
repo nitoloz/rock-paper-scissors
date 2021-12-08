@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GameType } from '../models/game-type';
+import { GameType } from '../../models/game-type';
 
 @Component({
   selector: 'app-header',

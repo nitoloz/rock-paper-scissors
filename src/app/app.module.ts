@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderModule } from '../header/header.module';
-import { ButtonModule } from '../button/button.module';
-import { HandCircleModule } from '../hand-circle/hand-circle.module';
+import { HeaderModule } from '../components/header/header.module';
+import { ButtonModule } from '../components/button/button.module';
+import { HandCircleModule } from '../components/hand-circle/hand-circle.module';
 
 @NgModule({
   declarations: [

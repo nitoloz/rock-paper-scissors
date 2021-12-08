@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Hand } from '../models/hand';
+import { Hand } from '../../models/hand';
 
 @Pipe({
   name: 'handIcon'

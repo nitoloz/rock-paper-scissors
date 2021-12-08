@@ -1,5 +1,5 @@
 import { GameTitlePipe } from './game-title.pipe';
-import { GameType } from '../models/game-type';
+import { GameType } from '../../models/game-type';
 
 describe('GameHandsPipe', () => {
   it('create an instance', () => {

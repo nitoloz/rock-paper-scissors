@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Hand } from '../models/hand';
+import { Hand } from '../../models/hand';
 
 @Component({
   selector: 'app-hand-circle',

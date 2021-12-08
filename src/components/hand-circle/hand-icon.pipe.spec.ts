@@ -1,5 +1,5 @@
 import { HandIconPipe } from './hand-icon.pipe';
-import { Hand } from '../models/hand';
+import { Hand } from '../../models/hand';
 
 describe('HandIconPipe', () => {
   it('create an instance', () => {

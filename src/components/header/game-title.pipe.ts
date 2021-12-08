@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { GameType } from '../models/game-type';
+import { GameType } from '../../models/game-type';
 
 const gameHands = [ 'rock', 'paper', 'scissors', 'lizard', 'spock' ];
 
