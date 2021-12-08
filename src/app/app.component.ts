@@ -4,7 +4,7 @@ import { GameType } from '../models/game-type';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent {
 
