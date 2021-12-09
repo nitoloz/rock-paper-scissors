@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   public gameType = GameType.Basic;
   public gameTypeEnum = GameType;
-  public score$: Observable<number>;
+  public score$: Observable<number> = this.store.pipe(select(selectGameScore));
 
   private subscription: Subscription;
 
@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.score$ = this.store.pipe(select(selectGameScore));
     this.subscription = this.store.pipe(select(selectGameType)).subscribe((gameType) => {
       this.gameType = gameType;
     });

@@ -12,3 +12,7 @@ export const selectGameScore = createSelector(
   selectAppState,
   (state: AppState) => state.score
 );
+export const selectShowRulesPopup = createSelector(
+  selectAppState,
+  (state: AppState) => state.showRules
+);

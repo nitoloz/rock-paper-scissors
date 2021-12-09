@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { GameType } from './models/game-type';
+import { Component, OnInit } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { RootState } from './ngrx/reducers';
+import { selectGameScore, selectGameType, selectShowRulesPopup } from './ngrx/selectors/app.selectors';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,9 @@ import { GameType } from './models/game-type';
 })
 export class AppComponent {
 
-  public gameTypeEnum = GameType;
+  public showRulesPopup$ = this.store.pipe(select(selectShowRulesPopup));
+
+  constructor(private store: Store<RootState>) {
+  }
 
 }

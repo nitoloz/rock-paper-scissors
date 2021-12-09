@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { RootState } from '../../ngrx/reducers';
-import { changeGameType, resetScore } from '../../ngrx/actions/app.actions';
+import { changeGameType, resetScore, toggleRulesPopup } from '../../ngrx/actions/app.actions';
 import { selectGameType } from '../../ngrx/selectors/app.selectors';
 import { map, Observable, of } from 'rxjs';
 import { GameType } from '../../models/game-type';
@@ -11,19 +11,15 @@ import { GameType } from '../../models/game-type';
   templateUrl: './buttons-container.component.html',
   styleUrls: [ './buttons-container.component.scss' ]
 })
-export class ButtonsContainerComponent implements OnInit {
+export class ButtonsContainerComponent {
 
-  public gameModeLabel$: Observable<string>;
+  public gameModeLabel$: Observable<string> = this.store.pipe(
+    select(selectGameType),
+    map((gameType) => {
+      return gameType === GameType.Basic ? 'advanced' : 'basic';
+    }));
 
   constructor(private store: Store<RootState>) {
-  }
-
-  ngOnInit(): void {
-    this.gameModeLabel$ = this.store.pipe(
-      select(selectGameType),
-      map((gameType) => {
-        return gameType === GameType.Basic ? 'advanced' : 'basic';
-      }));
   }
 
   public changeGameType(): void {
@@ -32,5 +28,9 @@ export class ButtonsContainerComponent implements OnInit {
 
   public resetScore(): void {
     this.store.dispatch(resetScore());
+  }
+
+  public showRulesPopup(): void {
+    this.store.dispatch(toggleRulesPopup());
   }
 }

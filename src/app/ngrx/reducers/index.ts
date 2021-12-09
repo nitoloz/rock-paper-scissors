@@ -1,6 +1,6 @@
 import { ActionReducerMap, createReducer, on } from '@ngrx/store';
 import { GameType } from '../../models/game-type';
-import { changeGameType, resetScore } from '../actions/app.actions';
+import { changeGameType, resetScore, toggleRulesPopup } from '../actions/app.actions';
 
 export interface RootState {
   app: AppState;
@@ -9,11 +9,13 @@ export interface RootState {
 export interface AppState {
   gameType: GameType;
   score: number;
+  showRules: boolean;
 }
 
 const initialState = {
   gameType: GameType.Basic,
-  score: 0
+  score: 0,
+  showRules: false,
 };
 
 export const appReducer = createReducer(
@@ -25,6 +27,10 @@ export const appReducer = createReducer(
   on(resetScore, (state) => ({
     ...state,
     score: 0
+  })),
+  on(toggleRulesPopup, (state) => ({
+    ...state,
+    showRules: !state.showRules
   })),
 );
 

@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
-import { GameTitlePipe } from './game-title.pipe';
+import { RulesOverlayComponent } from './rules-overlay.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('RulesOverlayComponent', () => {
+  let component: RulesOverlayComponent;
+  let fixture: ComponentFixture<RulesOverlayComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent, GameTitlePipe ]
+      declarations: [ RulesOverlayComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(RulesOverlayComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,6 +7,7 @@ import { HandCirclesContainerModule } from './components/hand-circles-container/
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './ngrx/reducers';
 import { ButtonsContainerModule } from './components/buttons-container/buttons-container.module';
+import { RulesOverlayModule } from './components/rules-overlay/rules-overlay.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ButtonsContainerModule } from './components/buttons-container/buttons-c
     HandCirclesContainerModule,
     StoreModule.forRoot(reducers),
     ButtonsContainerModule,
+    RulesOverlayModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]
