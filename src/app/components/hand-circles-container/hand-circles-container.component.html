@@ -13,12 +13,12 @@
     </div>
   </ng-container>
   <ng-template #basicGameMode>
-    <div class="circles-row">
+    <div class="circles-row circles-row--first-basic">
+      <app-hand-circle [hand]="handEnum.Paper" (handClicked)="handClicked(handEnum.Paper)"></app-hand-circle>
       <app-hand-circle [hand]="handEnum.Scissors" (handClicked)="handClicked(handEnum.Scissors)"></app-hand-circle>
     </div>
     <div class="circles-row circles-row--second-basic">
       <app-hand-circle [hand]="handEnum.Rock" (handClicked)="handClicked(handEnum.Rock)"></app-hand-circle>
-      <app-hand-circle [hand]="handEnum.Paper" (handClicked)="handClicked(handEnum.Paper)"></app-hand-circle>
     </div>
   </ng-template>
 </div>

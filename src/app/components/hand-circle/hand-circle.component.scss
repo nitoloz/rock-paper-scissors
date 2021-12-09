@@ -27,6 +27,10 @@
     }
   }
 
+  &:active {
+    transform: scale(0.9);
+  }
+
   &--blue {
     @include colored-circle(hsl(230, 89%, 62%), hsl(230, 89%, 65%), #2944c2);
   }
