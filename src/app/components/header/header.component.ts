@@ -1,22 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { GameType } from '../../models/game-type';
+import { select, Store } from '@ngrx/store';
+import { RootState } from '../../ngrx/reducers';
+import { Observable, Subscription } from 'rxjs';
+import { selectGameScore, selectGameType } from '../../ngrx/selectors/app.selectors';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: [ './header.component.scss' ]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
-  @Input() public gameType = GameType.Basic;
-  @Input() public score = 0;
-
+  public gameType = GameType.Basic;
   public gameTypeEnum = GameType;
+  public score$: Observable<number>;
 
-  constructor() {
+  private subscription: Subscription;
+
+  constructor(private store: Store<RootState>) {
   }
 
   ngOnInit(): void {
+    this.score$ = this.store.pipe(select(selectGameScore));
+    this.subscription = this.store.pipe(select(selectGameType)).subscribe((gameType) => {
+      this.gameType = gameType;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

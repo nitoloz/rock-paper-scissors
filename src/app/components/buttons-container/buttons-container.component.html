@@ -1,5 +1,5 @@
 <div class="buttons-container">
   <app-button [label]="'rules'"></app-button>
-  <app-button [label]="'advanced'" (clicked)="changeGameType()"></app-button>
-  <app-button [label]="'reset'"></app-button>
+  <app-button [label]="(gameModeLabel$ | async)" (clicked)="changeGameType()"></app-button>
+  <app-button [label]="'reset'" (clicked)="resetScore()"></app-button>
 </div>

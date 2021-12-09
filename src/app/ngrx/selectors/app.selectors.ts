@@ -7,3 +7,8 @@ export const selectGameType = createSelector(
   selectAppState,
   (state: AppState) => state.gameType
 );
+
+export const selectGameScore = createSelector(
+  selectAppState,
+  (state: AppState) => state.score
+);

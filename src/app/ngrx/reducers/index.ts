@@ -1,6 +1,6 @@
 import { ActionReducerMap, createReducer, on } from '@ngrx/store';
 import { GameType } from '../../models/game-type';
-import { changeGameType } from '../actions/app.actions';
+import { changeGameType, resetScore } from '../actions/app.actions';
 
 export interface RootState {
   app: AppState;
@@ -8,10 +8,12 @@ export interface RootState {
 
 export interface AppState {
   gameType: GameType;
+  score: number;
 }
 
 const initialState = {
-  gameType: GameType.Basic
+  gameType: GameType.Basic,
+  score: 0
 };
 
 export const appReducer = createReducer(
@@ -19,6 +21,10 @@ export const appReducer = createReducer(
   on(changeGameType, (state) => ({
     ...state,
     gameType: state.gameType === GameType.Basic ? GameType.Advanced : GameType.Basic
+  })),
+  on(resetScore, (state) => ({
+    ...state,
+    score: 0
   })),
 );
 
