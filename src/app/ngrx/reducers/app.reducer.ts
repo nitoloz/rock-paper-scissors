@@ -1,11 +1,13 @@
 import { GameType } from '../../models/game-type';
 import { createReducer, on } from '@ngrx/store';
-import { changeGameType, resetScore, toggleRulesPopup } from '../actions/app.actions';
-import { Hand } from '../../models/hand';
+import { changeGameType, playAgain, resetScore, selectHand, toggleRulesPopup } from '../actions/app.actions';
+import { getRandomHand, Hand } from '../../models/hand';
+import { checkWinner, Winner } from '../../models/winner';
 
 export interface SelectedHands {
-  playerOne: Hand;
-  playerTwo: Hand;
+  left: Hand;
+  right: Hand;
+  winner: Winner;
 }
 
 export interface AppState {
@@ -20,8 +22,9 @@ const initialState = {
   score: 0,
   showRules: false,
   selectedHands: {
-    playerOne: null,
-    playerTwo: null,
+    left: null,
+    right: null,
+    winner: null,
   }
 };
 
@@ -38,5 +41,23 @@ export const appReducer = createReducer(
   on(toggleRulesPopup, (state) => ({
     ...state,
     showRules: !state.showRules
+  })),
+  on(selectHand, (state, action) => {
+    const randomHand = getRandomHand(state.gameType);
+    const winner = checkWinner(action.hand, randomHand);
+    const newScore = winner === Winner.Left ? state.score + 1 : winner === Winner.Right ? state.score - 1 : state.score;
+    return {
+      ...state,
+      score: Math.max(newScore, 0),
+      selectedHands: {
+        left: action.hand,
+        right: randomHand,
+        winner: winner
+      }
+    };
+  }),
+  on(playAgain, (state) => ({
+    ...state,
+    selectedHands: initialState.selectedHands
   })),
 );

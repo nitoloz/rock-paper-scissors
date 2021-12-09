@@ -3,7 +3,10 @@
     <div class="header-container">
       <app-header></app-header>
     </div>
-    <app-hand-circles-container></app-hand-circles-container>
+    <app-game-results *ngIf="(winner$ | async); else game"></app-game-results>
+    <ng-template #game>
+      <app-hand-circles-container></app-hand-circles-container>
+    </ng-template>
     <app-buttons-container></app-buttons-container>
   </div>
 </div>

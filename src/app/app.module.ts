@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './ngrx/reducers';
 import { ButtonsContainerModule } from './components/buttons-container/buttons-container.module';
 import { RulesOverlayModule } from './components/rules-overlay/rules-overlay.module';
+import { GameResultsModule } from './components/game-results/game-results.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { RulesOverlayModule } from './components/rules-overlay/rules-overlay.mod
     StoreModule.forRoot(reducers),
     ButtonsContainerModule,
     RulesOverlayModule,
+    GameResultsModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]

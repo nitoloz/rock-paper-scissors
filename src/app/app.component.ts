@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { RootState } from './ngrx/reducers';
-import { selectGameScore, selectGameType, selectShowRulesPopup } from './ngrx/selectors/app.selectors';
+import { selectGameScore, selectGameType, selectShowRulesPopup, selectWinner } from './ngrx/selectors/app.selectors';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,7 @@ import { selectGameScore, selectGameType, selectShowRulesPopup } from './ngrx/se
 export class AppComponent {
 
   public showRulesPopup$ = this.store.pipe(select(selectShowRulesPopup));
+  public winner$ = this.store.pipe(select(selectWinner));
 
   constructor(private store: Store<RootState>) {
   }

@@ -27,6 +27,16 @@
     }
   }
 
+  &--big {
+    width: 150px;
+    height: 150px;
+
+    .white-circle {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
   &:active {
     transform: scale(0.9);
   }

@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Hand } from '../../models/hand';
 import { GameType } from '../../models/game-type';
-import { select, State, Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { RootState } from '../../ngrx/reducers';
 import { selectGameType } from '../../ngrx/selectors/app.selectors';
+import { selectHand } from '../../ngrx/actions/app.actions';
 
 @Component({
   selector: 'app-hand-circles-container',
@@ -20,7 +21,7 @@ export class HandCirclesContainerComponent {
   }
 
   public handClicked(hand: Hand): void {
-
+    this.store.dispatch(selectHand({ hand }));
   }
 
 }
