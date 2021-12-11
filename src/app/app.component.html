@@ -7,7 +7,7 @@
     <ng-template #game>
       <app-hand-circles-container></app-hand-circles-container>
     </ng-template>
-    <app-buttons-container></app-buttons-container>
+    <app-buttons-container *ngIf="!(winner$ | async)"></app-buttons-container>
   </div>
 </div>
 <app-rules-overlay *ngIf="showRulesPopup$ | async"></app-rules-overlay>

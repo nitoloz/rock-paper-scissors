@@ -9,6 +9,7 @@ import { reducers } from './ngrx/reducers';
 import { ButtonsContainerModule } from './components/buttons-container/buttons-container.module';
 import { RulesOverlayModule } from './components/rules-overlay/rules-overlay.module';
 import { GameResultsModule } from './components/game-results/game-results.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { GameResultsModule } from './components/game-results/game-results.module
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HeaderModule,
     HandCirclesContainerModule,
     StoreModule.forRoot(reducers),

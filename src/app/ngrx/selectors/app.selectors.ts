@@ -1,6 +1,7 @@
 import { RootState } from '../reducers';
 import { createSelector } from '@ngrx/store';
 import { AppState } from '../reducers/app.reducer';
+import { Winner } from '../../models/winner';
 
 export const selectAppState = (state: RootState) => state.app;
 
@@ -32,4 +33,14 @@ export const selectRightPlayerHand = createSelector(
 export const selectWinner = createSelector(
   selectAppState,
   (state: AppState) => state.selectedHands?.winner
+);
+
+export const selectIsLeftWinner = createSelector(
+  selectAppState,
+  (state: AppState) => state.selectedHands?.winner === Winner.Left
+);
+
+export const selectIsRightWinner = createSelector(
+  selectAppState,
+  (state: AppState) => state.selectedHands?.winner === Winner.Right
 );

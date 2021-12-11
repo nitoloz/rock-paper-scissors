@@ -2,17 +2,17 @@
   <div class="column">
     <div class="picked-text">you picked</div>
     <div>
-      <app-hand-circle [hand]="leftPlayerHand$ | async" [size]="circleSizeEnum.Big"></app-hand-circle>
+      <app-hand-circle [hand]="leftPlayerHand$ | async" [size]="circleSizeEnum.Big" [isWinner]="isLeftWinner$ | async"></app-hand-circle>
     </div>
   </div>
-  <div class="column center-column">
+  <div class="column center-column" [@appearance]>
     <div class="winner-text">{{winner$ | async | resultText}}</div>
     <button class="play-again-button" (click)="playAgain()">play again</button>
   </div>
   <div class="column">
     <div class="picked-text">the house picked</div>
     <div>
-      <app-hand-circle [hand]="rightPlayerHand$ | async" [size]="circleSizeEnum.Big"></app-hand-circle>
+      <app-hand-circle [hand]="rightPlayerHand$ | async" [size]="circleSizeEnum.Big" [isWinner]="isRightWinner$ | async"></app-hand-circle>
     </div>
   </div>
 </div>

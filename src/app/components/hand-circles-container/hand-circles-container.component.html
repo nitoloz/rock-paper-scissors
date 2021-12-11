@@ -1,4 +1,4 @@
-<div class="rows-container">
+<div class="rows-container" [@.disabled]="true">
   <ng-container *ngIf="(gameType$ | async) === gameTypeEnum.Advanced; else basicGameMode">
     <div class="circles-row">
       <app-hand-circle [hand]="handEnum.Scissors" (handClicked)="handClicked(handEnum.Scissors)"></app-hand-circle>

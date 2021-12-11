@@ -1,6 +1,8 @@
 <div class="colored-border"
+     [@slideInOut]
      [ngClass]="{
      'colored-border--big': size===circleSizeEnum.Big,
+     'colored-border--winner': isWinner,
      'colored-border--blue': hand === handEnum.Paper,
      'colored-border--yellow': hand === handEnum.Scissors,
      'colored-border--red': hand === handEnum.Rock,
