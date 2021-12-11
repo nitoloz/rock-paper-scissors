@@ -3,6 +3,7 @@
 .game-results-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .column {
     display: flex;
@@ -36,6 +37,20 @@
       border: none;
       padding: 10px 40px;
       border-radius: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center-column {
+    width: 100%;
+    order: 3;
+  }
+  .side-column {
+    width: 50%;
+
+    &--right {
+      order: 2;
     }
   }
 }
