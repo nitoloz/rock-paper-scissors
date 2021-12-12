@@ -1,8 +1,8 @@
 # Rock Paper Scissors
 
-[Play here](https://nitoloz.github.io/rps/)
+[Play here](https://nitoloz.github.io/rps/) and install on the phone to play offline
 
-Project inspired by the [Frontend Mentor Rock, Paper, Scissors game](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
+PWA app inspired by the [Frontend Mentor Rock, Paper, Scissors game](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH)
 ![](./screenshots/desktop_game.png)
 
 ## Development server
