@@ -11,7 +11,7 @@ import { GameType } from '../../models/game-type';
 import { Hand } from '../../models/hand';
 import { Winner } from '../../models/winner';
 
-fdescribe("App selectors", () => {
+describe("App selectors", () => {
 
   it("should select the game type", () => {
     const result = selectGameType.projector(initialState);
