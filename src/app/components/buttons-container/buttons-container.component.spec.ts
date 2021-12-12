@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonsContainerComponent } from './buttons-container.component';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { initialState } from '../../ngrx/reducers/app.reducer';
-import { changeGameType, playAgain, resetScore, toggleRulesPopup } from '../../ngrx/actions/app.actions';
+import { changeGameType, resetScore, toggleRulesPopup } from '../../ngrx/actions/app.actions';
 
 describe('ButtonsContainerComponent', () => {
   let component: ButtonsContainerComponent;
