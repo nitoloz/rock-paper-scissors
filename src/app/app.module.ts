@@ -10,6 +10,8 @@ import { ButtonsContainerModule } from './components/buttons-container/buttons-c
 import { RulesOverlayModule } from './components/rules-overlay/rules-overlay.module';
 import { GameResultsModule } from './components/game-results/game-results.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonsContainerModule,
     RulesOverlayModule,
     GameResultsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [ AppComponent ]
