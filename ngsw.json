@@ -1,0 +1,95 @@
+{
+  "configVersion": 1,
+  "timestamp": 1639322836078,
+  "index": "https://nitoloz.github.io/rps/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://nitoloz.github.io/rps/favicon.ico",
+        "https://nitoloz.github.io/rps/index.html",
+        "https://nitoloz.github.io/rps/main.ad16c05d91be27de.js",
+        "https://nitoloz.github.io/rps/manifest.webmanifest",
+        "https://nitoloz.github.io/rps/polyfills.bd3a3d8ecf8e87be.js",
+        "https://nitoloz.github.io/rps/runtime.ba864994c22d7118.js",
+        "https://nitoloz.github.io/rps/styles.f41e280c66b804cd.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://nitoloz.github.io/rps/assets/icon-close.svg",
+        "https://nitoloz.github.io/rps/assets/icon-lizard.svg",
+        "https://nitoloz.github.io/rps/assets/icon-paper.svg",
+        "https://nitoloz.github.io/rps/assets/icon-rock.svg",
+        "https://nitoloz.github.io/rps/assets/icon-scissors.svg",
+        "https://nitoloz.github.io/rps/assets/icon-spock.svg",
+        "https://nitoloz.github.io/rps/assets/icons/icon-128x128.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-144x144.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-152x152.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-192x192.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-512x512.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-72x72.png",
+        "https://nitoloz.github.io/rps/assets/icons/icon-96x96.png",
+        "https://nitoloz.github.io/rps/assets/image-rules-bonus.svg",
+        "https://nitoloz.github.io/rps/assets/image-rules.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://nitoloz.github.io/rps/assets/icon-close.svg": "475d87e4f04aa919a101e56b2570468afdde1167",
+    "https://nitoloz.github.io/rps/assets/icon-lizard.svg": "c0c0ff82fb23b05444159224171c47cd9105a8ba",
+    "https://nitoloz.github.io/rps/assets/icon-paper.svg": "72d17fab1c796ed44faad7583da4002e5fa4368e",
+    "https://nitoloz.github.io/rps/assets/icon-rock.svg": "722434585d1f7888f805d00dced2ccd6549c4339",
+    "https://nitoloz.github.io/rps/assets/icon-scissors.svg": "355e9094c5844028acf07a53121255d07758faf1",
+    "https://nitoloz.github.io/rps/assets/icon-spock.svg": "87bf53f22557ed4d3a4a5655544896276cbe324d",
+    "https://nitoloz.github.io/rps/assets/icons/icon-128x128.png": "40af71848037a10b64da24cb40bf074207cfc954",
+    "https://nitoloz.github.io/rps/assets/icons/icon-144x144.png": "8413f3b2b4552b5eb379a1511bd25f11dfe57bba",
+    "https://nitoloz.github.io/rps/assets/icons/icon-152x152.png": "d51681ee921d73c9304ee52f708d963157f66325",
+    "https://nitoloz.github.io/rps/assets/icons/icon-192x192.png": "432ea6f490f350127e5e8d285194dad95f5b83e8",
+    "https://nitoloz.github.io/rps/assets/icons/icon-512x512.png": "9a95c05d9fae6aaadc487436ae961e1609c9a9cd",
+    "https://nitoloz.github.io/rps/assets/icons/icon-72x72.png": "eedd7a8474e378c3c141911f665a637326a7f556",
+    "https://nitoloz.github.io/rps/assets/icons/icon-96x96.png": "d51681ee921d73c9304ee52f708d963157f66325",
+    "https://nitoloz.github.io/rps/assets/image-rules-bonus.svg": "5ee3acc5b20f5b9f05b2a151b9dd8ddf6444f518",
+    "https://nitoloz.github.io/rps/assets/image-rules.svg": "8abe13f83ec0ddcab0557bfdedf6da5c7076f2d4",
+    "https://nitoloz.github.io/rps/favicon.ico": "aea9dfe4552178365edb5a3477fe877c046faa6a",
+    "https://nitoloz.github.io/rps/index.html": "cd3ac08da7f449b1b40e3faa4143b7db4b85f502",
+    "https://nitoloz.github.io/rps/main.ad16c05d91be27de.js": "41c4631c05bbb32ef9028d6c88589df8a1fe113b",
+    "https://nitoloz.github.io/rps/manifest.webmanifest": "a6fe7264dedfb5a435660edbd737df6ab1492167",
+    "https://nitoloz.github.io/rps/polyfills.bd3a3d8ecf8e87be.js": "448dadbc206bde381194f7a1a8b0b3190a8b3956",
+    "https://nitoloz.github.io/rps/runtime.ba864994c22d7118.js": "0abc9bfa9fadf80b7e87e94c685b0024d7919020",
+    "https://nitoloz.github.io/rps/styles.f41e280c66b804cd.css": "47e04047d0f1e3b90498398a45f9dbec912e8abe"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

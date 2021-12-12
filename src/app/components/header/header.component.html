@@ -1,9 +1,0 @@
-<div class="header-frame">
-  <div class="title" [ngClass]="{'title-basic': gameType === gameTypeEnum.Basic, 'title-advanced': gameType === gameTypeEnum.Advanced}">
-    <div *ngFor="let label of (gameType | gameTitle)">{{label}}</div>
-  </div>
-  <div class="score-container">
-    <div class="score-label">score</div>
-    <div class="score-value">{{score$ | async}}</div>
-  </div>
-</div>
