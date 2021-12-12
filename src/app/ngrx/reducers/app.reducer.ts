@@ -17,7 +17,7 @@ export interface AppState {
   selectedHands: SelectedHands;
 }
 
-const initialState = {
+export const initialState = {
   gameType: GameType.Basic,
   score: 0,
   showRules: false,

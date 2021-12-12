@@ -15,9 +15,11 @@ export class RulesOverlayComponent {
 
   @Output() public closed = new EventEmitter<void>();
 
-  public imageUrl$: Observable<string> = this.store.pipe(select(selectGameType), map((gameType) => {
-    return gameType === GameType.Basic ? `image-rules.svg` : `image-rules-bonus.svg`;
-  }));
+  public imageUrl$: Observable<string> = this.store.pipe(
+    select(selectGameType),
+    map((gameType) => {
+      return gameType === GameType.Basic ? `image-rules.svg` : `image-rules-bonus.svg`;
+    }));
 
   constructor(private store: Store<RootState>) {
   }

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HandCircleComponent } from './hand-circle.component';
 import { HandIconPipe } from './hand-icon.pipe';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HandCircleComponent', () => {
   let component: HandCircleComponent;
@@ -9,6 +10,7 @@ describe('HandCircleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ NoopAnimationsModule ],
       declarations: [ HandCircleComponent, HandIconPipe ]
     })
       .compileComponents();
